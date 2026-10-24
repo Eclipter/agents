@@ -1,25 +1,29 @@
 # ~/.agents
 
-This directory is the common source of truth for agent instructions. Edit skills, hooks, and `AGENTS.md` here. Harnesses read those files through symlinks.
+This repo is a directory for the common source of truth for agent instructions. Edit skills, hooks, and `AGENTS.md` here. Harnesses read those files through symlinks.
 
-## Symlinks
+## Setup
 
-Symlink a harness path to the matching path in this repo when that harness reads the same format.
+- Clone the repo
 
-Current links:
+- Move the repo to ~/.agents directory (or merge with an existing one)
 
-- `~/.cursor/skills` -> `~/.agents/skills`
-- `~/Library/Application Support/Cursor/AgentStores/cursor_agent_stores/u218146771/files/skills` -> `~/.agents/skills` (Cursor changes the skills directory when "Sync Skills for Cloud Agents" is enabled)
-- `~/.cursor/hooks` -> `~/.agents/hooks`
-- `~/.codex/hooks` -> `~/.agents/hooks`
-- `~/.codex/AGENTS.md` -> `~/.agents/AGENTS.md`
+- For every harness, symlink paths to the matching paths in this repo if that harness reads the same format.
 
-The hook list is a separate format per harness:
+  Example:
 
-- `~/.cursor/hooks.json` -> `~/.agents/hooks/cursor.json`
-- `~/.codex/hooks.json` -> `~/.agents/hooks/codex.json`
+  - `~/.cursor/skills` -> `~/.agents/skills`
+  - `~/Library/Application Support/Cursor/AgentStores/cursor_agent_stores/u218146771/files/skills` -> `~/.agents/skills` (Cursor changes the skills directory when "Sync Skills for Cloud Agents" is enabled)
+  - `~/.cursor/hooks` -> `~/.agents/hooks`
+  - `~/.codex/hooks` -> `~/.agents/hooks`
+  - `~/.codex/AGENTS.md` -> `~/.agents/AGENTS.md`
 
-Cursor rules use Cursor's own format in its customization settings. The user copies items from `AGENTS.md` into those settings by hand.
+  The hook list is a separate format per harness:
+
+  - `~/.cursor/hooks.json` -> `~/.agents/hooks/cursor.json`
+  - `~/.codex/hooks.json` -> `~/.agents/hooks/codex.json`
+
+- Cursor rules use Cursor's own format in its customization settings. The user copies items from `AGENTS.md` into those settings by hand.
 
 ## Working here
 
