@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [
+      {
+        "command": "/opt/homebrew/bin/node ./hooks/ponytail-activate.js",
+        "timeout": 5
+      }
+    ],
+    "beforeSubmitPrompt": [
+      {
+        "command": "/opt/homebrew/bin/node ./hooks/ponytail-mode-tracker.js",
+        "timeout": 5
+      }
+    ]
+  }
+}
