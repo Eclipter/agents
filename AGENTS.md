@@ -1,6 +1,6 @@
 # Global Agent Instructions
 
-Project-level rules override these.
+Project-level rules override these global-level rules and skills.
 
 ## Talking
 
