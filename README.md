@@ -9,6 +9,7 @@ Symlink a harness path to the matching path in this repo when that harness reads
 Current links:
 
 - `~/.cursor/skills` -> `~/.agents/skills`
+- `~/Library/Application Support/Cursor/AgentStores/cursor_agent_stores/u218146771/files/skills` -> `~/.agents/skills` (Cursor changes the skills directory when "Sync Skills for Cloud Agents" is enabled)
 - `~/.cursor/hooks` -> `~/.agents/hooks`
 - `~/.codex/hooks` -> `~/.agents/hooks`
 - `~/.codex/AGENTS.md` -> `~/.agents/AGENTS.md`
