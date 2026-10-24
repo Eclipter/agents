@@ -45,10 +45,10 @@ Subject line:
 - imperative mood, as a continuation of "If applied, this commit will …";
 - the change to the system, not a file list and not "update code";
 - no trailing period;
-- the whole line at most 72 characters;
+- the whole line at most 50 characters, even when recent subjects are longer (hard limit);
 - something that belongs in a changelog.
 
-Add a body only when the "why" is not obvious from the subject. Separate it with a blank line and wrap near 72 characters. Do not retell the diff and do not write "this commit".
+Add a body only when the "why" is not obvious from the subject. One blank line between the subject and the body is required. Keep each body line under 72 characters when a break is possible (soft limit). Do not retell the diff and do not write "this commit".
 
 Trailers only when they are real: `BREAKING CHANGE:`, `Fixes #n`, `Refs #n`. Do not invent issue numbers.
 
