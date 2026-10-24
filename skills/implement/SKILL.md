@@ -113,7 +113,7 @@ Also update the plan:
   - Repeat the workflow in your worktree until the user selects to merge.
   - Skip the question if there are no changes in the app itself (only docs, etc.).
 - If the main checkout has uncommitted changes, stash them, merge and then pop.
-- Merge your branch into `<branch>`.
+- Squash-merge your branch into `<branch>`.
 - Remove your working git branch and git worktree.
 
 ### 10. Report
