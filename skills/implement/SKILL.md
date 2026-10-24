@@ -1,6 +1,6 @@
 ---
 name: implement
-description: "Take a task from the project plan (or from the prompt), implement it, update tests, run them, update docs, and commit."
+description: "Use for any change."
 ---
 
 # Implement
