@@ -124,4 +124,4 @@ Report with the following form:
 
 - 🕑 **Plan:** — what remains and what was added.
 
-- ❌ **Not checked:** — what was skipped and why.
+- ❌ **Not checked:** — what was skipped and why. Don't mention steps that were skipped because of project rules.
