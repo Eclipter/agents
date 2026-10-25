@@ -25,6 +25,10 @@ This repo is a directory for the common source of truth for agent instructions. 
 
 - Cursor rules use Cursor's own format in its customization settings. The user copies items from `AGENTS.md` into those settings by hand.
 
+## Included skills
+
+- [`grill-me`](skills/grill-me/SKILL.md) — stress-test a plan or decision through a structured interview. Adapted from [Matt Pocock's grilling skill](https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md).
+
 ## Working here
 
 Agents work on `main` and commit on `main`.
