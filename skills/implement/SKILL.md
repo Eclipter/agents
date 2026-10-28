@@ -62,6 +62,7 @@ Files the worktree lacks (untracked or modified plan files, gitignored files suc
 
 ### 5. Update tests
 
+- Skip the step if the project doesn't involve any tests at all.
 - Find the tests that cover the touched code and fix those the change breaks.
 - Add tests for new behavior and for the edge cases the change introduces: empty, invalid, error, and boundary inputs.
 - For a bug fix, add a test that fails without the fix.
