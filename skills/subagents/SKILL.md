@@ -9,7 +9,7 @@ Delegate main or independent subtasks to subagents.
 
 - Pick the model by the tool you run in:
   - OpenCode: Nemotron 3.5 Super VL Medium;
-  - Codex (ChatGPT): GPT-6 Luna High (general tasks) or GPT-6.1 Terra Max (priority choice for computer use tasks);
+  - Codex (ChatGPT): GPT-6 Luna High (general tasks) or GPT-6.1 Terra High (priority choice for computer use tasks);
   - Cursor: Grok 4.7 Medium (regular speed).
 - Never use the top tier models for subagents.
 - Relaunch the subagent with maximum reasoning level available in case the subagent failed and you feel that it happened because of lack of reasoning.
