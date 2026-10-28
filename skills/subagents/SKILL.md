@@ -14,6 +14,7 @@ Delegate main or independent subtasks to subagents.
 - Never use the top tier models for subagents.
 - Relaunch the subagent with maximum reasoning level available in case the subagent failed and you feel that it happened because of lack of reasoning.
 - Give subagents narrow tasks and only the context they need.
+- Nested subagents are allowed.
 
 ## Waiting for subagents
 
