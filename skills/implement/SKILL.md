@@ -12,7 +12,6 @@ description: "Use for any change."
 - **Do not guess scope.** The task is what the plan item or the prompt says. Extra features, drive-by refactors, and unrelated cleanups stay out of the commit; if any look worth doing, ask the user.
 - **Tests and docs are part of the task.** A change without them is unfinished.
 - **Never commit red.** Failing tests, a failing linter, or a broken build block the commit.
-- **No secrets.** Do not stage `.env`, keys, or tokens. If they show up in the diff, stop and say so.
 
 ## Workflow
 
