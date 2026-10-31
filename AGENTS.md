@@ -20,6 +20,7 @@ Project-level rules override these global-level rules and skills.
 
 - When using a skill, always say "❇️ USED SKILLS: <skill 1>, <skill 2>, ...". Reading a skill is not the same as using it.
 - Don't use sudo if running as root.
+- Only when running privileged shell commands locally on the MacBook, use plain `sudo` without `-n`; allow its normal authentication flow instead of using AppleScript's `with administrator privileges`. This rule does not apply to remote hosts or other machines.
 - When changing or adding code, write comments in English, and only where you change or add code. Leave existing comments as they are. If the changed block already has a Russian comment, don't rewrite it; write new comments in English.
 
 ### Python
