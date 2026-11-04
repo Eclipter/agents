@@ -1,6 +1,6 @@
 ---
 name: add-sudo-ssh-auth-sock
-description: "Enable sudo authentication via a forwarded SSH agent, including Cursor, using a system wrapper independent of shell startup files."
+description: "Enable sudo authentication via a forwarded SSH agent, including Cursor."
 ---
 
 # Add sudo SSH auth sock
