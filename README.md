@@ -8,20 +8,42 @@ This repo is a directory for the common source of truth for agent instructions. 
 
 - Move the repo to ~/.agents directory (or merge with an existing one)
 
-- For every harness, symlink paths to the matching paths in this repo if that harness reads the same format.
+- For every harness, symlink each path it reads to the matching path in this repo if that harness reads the same format. `ln` will not replace a path that already exists, so move (remove) a real directory aside first.
 
-  Example:
+  The hook list is a separate format per harness, so `hooks.json` points at `hooks/cursor.json` or `hooks/codex.json`.
 
-  - `~/.cursor/skills` -> `~/.agents/skills`
-  - `~/Library/Application Support/Cursor/AgentStores/cursor_agent_stores/u218146771/files/skills` -> `~/.agents/skills` (Cursor changes the skills directory when "Sync Skills for Cloud Agents" is enabled)
-  - `~/.cursor/hooks` -> `~/.agents/hooks`
-  - `~/.codex/hooks` -> `~/.agents/hooks`
-  - `~/.codex/AGENTS.md` -> `~/.agents/AGENTS.md`
+  Cursor:
 
-  The hook list is a separate format per harness:
+  ```sh
+  # ~/.cursor/skills -> ~/.agents/skills
+  ln -s ~/.agents/skills ~/.cursor/skills
 
-  - `~/.cursor/hooks.json` -> `~/.agents/hooks/cursor.json`
-  - `~/.codex/hooks.json` -> `~/.agents/hooks/codex.json`
+  # ~/.cursor/hooks -> ~/.agents/hooks
+  ln -s ~/.agents/hooks ~/.cursor/hooks
+
+  # ~/.cursor/hooks.json -> ~/.agents/hooks/cursor.json
+  ln -s ~/.agents/hooks/cursor.json ~/.cursor/hooks.json
+  ```
+
+  Cursor changes the skills directory when "Sync Skills for Cloud Agents" is enabled:
+
+  ```sh
+  # ~/Library/Application Support/Cursor/AgentStores/cursor_agent_stores/u218146771/files/skills -> ~/.agents/skills
+  ln -s ~/.agents/skills "$HOME/Library/Application Support/Cursor/AgentStores/cursor_agent_stores/u218146771/files/skills"
+  ```
+
+  Codex:
+
+  ```sh
+  # ~/.codex/AGENTS.md -> ~/.agents/AGENTS.md
+  ln -s ~/.agents/AGENTS.md ~/.codex/AGENTS.md
+
+  # ~/.codex/hooks -> ~/.agents/hooks
+  ln -s ~/.agents/hooks ~/.codex/hooks
+
+  # ~/.codex/hooks.json -> ~/.agents/hooks/codex.json
+  ln -s ~/.agents/hooks/codex.json ~/.codex/hooks.json
+  ```
 
 - Cursor rules use Cursor's own format in its customization settings. The user copies items from `AGENTS.md` into those settings by hand.
 
