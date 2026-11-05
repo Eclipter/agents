@@ -1,5 +1,5 @@
 ---
-name: add-sudo-ssh-auth-sock
+name: sudo-ssh-auth
 description: "Enable sudo authentication via a forwarded SSH agent, including Cursor."
 ---
 
