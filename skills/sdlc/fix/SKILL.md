@@ -33,6 +33,6 @@ Run the `implement` workflow from step 2 (reading the code the batch touches) on
 
 ### 3. Report
 
-The `implement` report, with one line on top:
+The `implement` report, with one line on top (this format is obligatory even for small commits):
 
 - 🎯 **Cause:** — one sentence from the diagnosis.

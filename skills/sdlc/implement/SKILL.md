@@ -118,10 +118,10 @@ Also update the plan:
 
 ### 10. Report
 
-Report with the following form:
+Report with the following format (this format is obligatory even for small commits):
 
 - ✅ **Done:** — the plan items (or the task) completed, the integration commit hash and subject.
 
-- 🕑 **Plan:** — what remains and what was added.
+- 🕑 **Plan:** — what remains and what was added. Omit the item if there is nothing to say.
 
 - ❌ **Not checked:** — what was skipped and why. Don't mention steps that were skipped because of project rules.
