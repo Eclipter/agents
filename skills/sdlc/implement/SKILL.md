@@ -98,7 +98,17 @@ Also update the plan:
 - Commit. Do not push, amend, or rewrite history unless the user asked.
 - If a hook rejects the commit, fix the cause and make a new commit. Do not use `--no-verify`.
 
-### 9. Merge
+### 9. Report
+
+Report with the following format (this format is obligatory even for small commits):
+
+- ✅ **Done:** — the plan items (or the task) completed, the integration commit hash and subject.
+
+- 🕑 **Plan:** — what remains and what was added. Omit the item if there is nothing to say.
+
+- ❌ **Not checked:** — what was skipped and why. Don't mention steps that were skipped because of project rules.
+
+### 10. Merge
 
 - Skip the step if there's no git repo.
 - Find out `<branch>`. They can be (from the biggest priority to the least):
@@ -115,13 +125,3 @@ Also update the plan:
 - If the main checkout has uncommitted changes, stash them, merge and then pop.
 - Squash-merge your branch into `<branch>`.
 - Remove your working git branch and git worktree.
-
-### 10. Report
-
-Report with the following format (this format is obligatory even for small commits):
-
-- ✅ **Done:** — the plan items (or the task) completed, the integration commit hash and subject.
-
-- 🕑 **Plan:** — what remains and what was added. Omit the item if there is nothing to say.
-
-- ❌ **Not checked:** — what was skipped and why. Don't mention steps that were skipped because of project rules.
