@@ -1,5 +1,5 @@
 ---
-name: vibe-sec
+name: web-app-sec
 description: "Secure coding checklist for web apps: access control, XSS/CSRF, SSRF, injection, uploads, JWT, headers, API security. Use when writing or reviewing code that handles auth, user input, files, sessions, or external requests, or when the user asks for a security scan or audit."
 ---
 
