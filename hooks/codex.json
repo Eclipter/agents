@@ -1,3 +1,26 @@
 {
-  "hooks": {}
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/bin/sh -c 'cd \"$HOME/.codex\" && exec ./hooks/ponytail.sh ponytail-activate.js'",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/bin/sh -c 'cd \"$HOME/.codex\" && exec ./hooks/ponytail.sh ponytail-mode-tracker.js'",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
 }
