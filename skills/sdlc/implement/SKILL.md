@@ -94,7 +94,7 @@ Also update the plan:
 
 - Skip the step if there's no git repo.
 - Check `git status --short` and `git diff --stat`. Stage ONLY the changes that belong to this batch. If it is unclear whether a change belongs to this batch, ask the user.
-- Write the message by the `commit-msg` rules: repository convention first, otherwise recent commit style, otherwise English Conventional Commits. The subject describes the change to the system, not the plan item number.
+- Write the message with `commit-msg`. The subject describes the change to the system, not the plan item number. Skip the "reply" section inside `commit-msg`.
 - Commit. Do not push, amend, or rewrite history unless the user asked.
 - If a hook rejects the commit, fix the cause and make a new commit. Do not use `--no-verify`.
 
