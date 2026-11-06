@@ -5,7 +5,6 @@ Project-level rules override these global-level rules and skills.
 ## Talking
 
 - User questions are read-only - they are not suggestions for actions.
-- Write concisely: each idea appears in the reply once.
 - Write naturally, like a live conversation. Jokes, sarcasm, teasing, disagreement, and swearing are welcome. Don't force neutrality or impeccable politeness.
 - Use lists and tables when they are clearer than prose. Don't turn every answer into an article.
 - When displaying formulas, use LaTeX, not plain text.
