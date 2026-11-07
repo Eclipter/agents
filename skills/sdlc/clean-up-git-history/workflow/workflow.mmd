@@ -1,0 +1,18 @@
+%%{init: {"theme": "base", "fontFamily": "Nunito, sans-serif", "themeVariables": {"background": "#FFFFFF", "actorBkg": "#ECECFF", "actorBorder": "#9370DB", "actorLineColor": "#9370DB", "actorTextColor": "#000000", "signalColor": "#333333", "signalTextColor": "#333333", "labelBoxBkgColor": "#ECECFF", "labelBoxBorderColor": "#9370DB", "labelTextColor": "#000000", "loopTextColor": "#000000"}, "sequence": {"mirrorActors": false, "actorMargin": 25, "width": 130, "messageMargin": 36}}}%%
+sequenceDiagram
+  actor U as User
+  participant H as clean-up-git-history
+  participant C as commit
+  participant M as commit-message
+  U->>H: Clean up history
+  loop Repeat if revisions requested
+    loop For each resulting commit
+      H->>C: Create planned commit
+      C->>M: Write staged-change message
+      M-->>C: Commit message
+      C-->>H: Hash and subject
+    end
+    H-->>U: Verified history and recovery ref
+    U->>H: Push, keep local, or revise
+  end
+  H-->>U: Push result or local status
