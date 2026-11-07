@@ -1,0 +1,16 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.directory
+.env
+.env.*
+*.pem
+*.key
+/.stfolder/
