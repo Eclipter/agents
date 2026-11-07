@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [
+      {
+        "command": "/bin/sh ./hooks/ponytail.sh ponytail-activate.js",
+        "timeout": 120
+      }
+    ],
+    "beforeSubmitPrompt": [
+      {
+        "command": "/bin/sh ./hooks/ponytail.sh ponytail-mode-tracker.js",
+        "timeout": 120
+      }
+    ]
+  }
+}
