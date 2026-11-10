@@ -80,6 +80,8 @@ Shows one representative assignment; independent assignments can run concurrentl
 
 ## Instructions for agents
 
+Skills and `AGENTS.md` define agent behavior. Classify commits by their effect, not the `.md` extension. Use `fix` or `feat` for behavior changes and `docs` only for explanatory changes. A `.md` file alone does not exempt a change from applicable review or validation.
+
 Agents work on `main` and commit on `main`.
 
 When using the `implement` workflow, skip the tests.
