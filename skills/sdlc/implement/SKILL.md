@@ -77,7 +77,8 @@ task, there is nothing to ask here.
 
 ### Create a new branch
 
-- Skip the step if there's no git repo; work in place.
+- Skip the step if there's no git repo.
+- Proceed with the step even if the change is small.
 - Create a new git branch in a new git worktree in the folder next to the
   project folder, from the current HEAD of the project's checkout. Name them
   conventionally, not with codex/, etc.
