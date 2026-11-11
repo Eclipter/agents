@@ -116,7 +116,7 @@ Report the range, why it was the largest safe range, the subjects and bodies in
 order, the checks, and the recovery ref. If the history was already in that
 shape, say so and do not rewrite it just to produce a change.
 
-Ask with the structured question tool, and wait. Name the upstream branch and
+Ask with the structured question tool, and wait (unless the user said to push --force). Name the upstream branch and
 whether the push replaces remote history. The choices are push, keep the result
 local, or revise it. If no upstream exists, ask for the destination. Do not
 invent a remote or create a hosted repository.
