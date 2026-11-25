@@ -8,7 +8,7 @@ description: "Delegate subtasks to subagents."
 ## Principles
 
 - Pick the model by the tool you run in:
-  - Codex (ChatGPT): GPT-6.1 Sol Medium.
+  - Codex (ChatGPT): GPT-6.2 Sol Medium.
   - Cursor: Grok 4.7 Medium.
 - Never use the top tier models for subagents.
 - Use regular speed.
