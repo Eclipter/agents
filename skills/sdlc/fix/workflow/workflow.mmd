@@ -1,0 +1,31 @@
+%%{init: {"theme": "base", "fontFamily": "Nunito, sans-serif", "themeVariables": {"background": "#FFFFFF", "actorBkg": "#ECECFF", "actorBorder": "#9370DB", "actorLineColor": "#9370DB", "actorTextColor": "#000000", "signalColor": "#333333", "signalTextColor": "#333333", "labelBoxBkgColor": "#ECECFF", "labelBoxBorderColor": "#9370DB", "labelTextColor": "#000000", "loopTextColor": "#000000"}, "sequence": {"mirrorActors": false, "actorMargin": 25, "width": 130, "messageMargin": 36}}}%%
+sequenceDiagram
+  actor U as User
+  participant F as fix
+  participant D as diagnose
+  participant I as implement
+  participant R as ponytail-review
+  participant V as verify-ux-ui
+  participant Docs as update-docs
+  participant C as commit
+  participant M as commit-message
+  U->>F: Fix reported symptom
+  F->>D: Find root cause
+  D-->>F: Cause, remedy, unresolved checks
+  alt Cause outside project control
+    F-->>U: Diagnosis only
+  else Project can fix cause
+    F->>I: Implement root-cause fix
+    I->>R: Review changes
+    R-->>I: Findings or approval
+    I->>V: If UI changed: verify
+    V-->>I: Results or blocker
+    I->>Docs: Update affected docs
+    Docs-->>I: Changes and unresolved claims
+    I->>C: If Git: commit batch
+    C->>M: Write staged-change message
+    M-->>C: Commit message
+    C-->>I: Hash and subject
+    I-->>F: Implementation report
+    F-->>U: Cause and implementation report
+  end
