@@ -1,0 +1,15 @@
+%%{init: {"theme": "base", "fontFamily": "Nunito, sans-serif", "themeVariables": {"background": "#FFFFFF", "actorBkg": "#ECECFF", "actorBorder": "#9370DB", "actorLineColor": "#9370DB", "actorTextColor": "#000000", "signalColor": "#333333", "signalTextColor": "#333333", "labelBoxBkgColor": "#ECECFF", "labelBoxBorderColor": "#9370DB", "labelTextColor": "#000000", "loopTextColor": "#000000"}, "sequence": {"mirrorActors": false, "actorMargin": 25, "width": 130, "messageMargin": 36}}}%%
+sequenceDiagram
+  actor U as User
+  participant S as create-my-skill
+  participant V as visualize-skill-workflow
+  participant C as commit
+  participant M as commit-message
+  U->>S: Create or update skill
+  S->>V: If skill calls skills: diagram
+  V-->>S: Mermaid source and SVG
+  S->>C: Commit skill changes
+  C->>M: Write staged-change message
+  M-->>C: Commit message
+  C-->>S: Hash and subject
+  S-->>U: Done
